@@ -1,5 +1,5 @@
 import * as React from "react"
-import Sprawdz from "../components/layouts/children/Sprawdz"
+import Zakoduj from "../components/layouts/children/Zakoduj"
 import Layout from "../components/layouts/Layout"
 import "../styles/style.css"
 
@@ -7,7 +7,7 @@ const IndexPage = () => {
   return (
     <main className="main">
        <Layout>
-         <Sprawdz />
+        <Zakoduj />
        </Layout>
     </main>
   )
