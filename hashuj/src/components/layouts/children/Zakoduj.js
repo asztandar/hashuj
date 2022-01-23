@@ -8,7 +8,7 @@ const Zakoduj = () => {
 
 
     return (
-        <article className="article">
+        // <article className="article">
             <div className="sprawdz-div">
                 <input
                     type="text"
@@ -22,7 +22,7 @@ const Zakoduj = () => {
                     role="presentation"
                 />
             </div>
-        </article>
+        // </article>
     );
 };
 

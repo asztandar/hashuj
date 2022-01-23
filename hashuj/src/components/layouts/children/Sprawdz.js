@@ -5,8 +5,7 @@ import lupa from "../../../images/search.png";
 import { goodLenght, isEmpty } from "../../../functions/functions";
 const Sprawdz = () => {
     const [input, setInput] = useState("");
-
-
+    const [hash, setHash] = useState("");
 
     function handleClick(){
         if(isEmpty(input) && goodLenght(input))  checkHashExist(input)
@@ -14,11 +13,22 @@ const Sprawdz = () => {
     }
 
     function checkHashExist(value){
-        alert("Tak");
-    }
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ userHash: value })
+        };
+        fetch('http://localhost:3000/checkHash', requestOptions)
+        .then(response => response.json())
+        .then(data => {
+            setHash(data.userHash)
+        } );
+        console.log(hash)
 
+    }
+    
     return (
-        <article className="article">
+        // <article className="article">
             <div className="sprawdz-div">
                 <input
                     type="text"
@@ -34,7 +44,7 @@ const Sprawdz = () => {
                     onKeyDown={handleClick}
                 />
             </div>
-        </article>
+        // </article>
     );
 };
 
