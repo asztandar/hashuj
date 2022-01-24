@@ -1,11 +1,12 @@
 {
-  "name": "sprawdz",
+  "name": "server",
   "version": "1.0.0",
-  "description": "polaczenie z zewnetrznym api i baza danych",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "asztandar",
   "license": "ISC",
   "dependencies": {
@@ -13,7 +14,6 @@
     "cors": "^2.8.5",
     "dotenv": "^14.2.0",
     "express": "^4.17.2",
-    "mysql": "^2.18.1",
-    "node-fetch": "^2.6.7"
+    "mysql": "^2.18.1"
   }
 }

@@ -92,8 +92,38 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
+.article-zakoduj{
+  background-color: var(--main-color);
+    width: 100%;
+    /* height: 70%; */
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-zakoduj > .sprawdz-div{
+  width: 70%;
+    height: 25%;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    border-radius: 40px;
+    background-color: #918edb;
+}
+
+.article-zakoduj > .sprawdz-div > img {
+  margin-left: 5px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
 
 .article > .sprawdz-div {
     width: 70%;
@@ -114,6 +144,16 @@ body {
     cursor: pointer;
   }
 
+  .article-zakoduj > .sprawdz-div > input {
+    width: 90%;
+    height: 90%;
+    font-size: 40px;
+    font-family: "Sitka Display";
+    text-align: center;
+    background-color: #918edb;
+    color: #ffffff !important;
+    border: none;
+  }
 
   .article > .sprawdz-div > input {
     width: 90%;
@@ -143,4 +183,35 @@ body {
 .nomodule{
   padding: 30px 50px;
   background-color: #E3D25C;
+}
+
+
+
+.ok{
+  margin-top: 50px;
+  width: auto;
+  height: auto;
+  padding: 20px 40px;
+  background-color: #74EF89;
+}
+
+.error{
+  margin-top: 50px;
+  width: auto;
+  height: auto;
+  padding: 20px 40px;
+  background-color: #BE3D3D;
+}
+
+.warning{
+  margin-top: 50px;
+  width: auto;
+  height: auto;
+  padding: 20px 40px;
+  background-color: #E3D25C;
+}
+
+.article-zakoduj > .checkbox{
+ width: 70%;
+ margin-left: 30px;
 }

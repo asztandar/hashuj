@@ -29,9 +29,9 @@ const Menu = () => {
                 </ul>
             </div>
             <div id="hamburger-icon" onClick={toggleMobileMenu} onKeyDown={toggleMobileMenu} role="presentation">
-                <div class="bar1 bar"></div>
-                <div class="bar2 bar"></div>
-                <div class="bar3 bar"></div>
+                <div className="bar1 bar"></div>
+                <div className="bar2 bar"></div>
+                <div className="bar3 bar"></div>
                 <div className="menuMobile">
                     <ul>
                         <li>

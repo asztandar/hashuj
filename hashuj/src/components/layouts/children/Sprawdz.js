@@ -6,29 +6,56 @@ import { goodLenght, isEmpty } from "../../../functions/functions";
 const Sprawdz = () => {
     const [input, setInput] = useState("");
     const [hash, setHash] = useState("");
+    const [hashText, setHashText] = useState("");
+    const [responseCode, setResponseCode] = useState("");
 
-    function handleClick(){
-        if(isEmpty(input) && goodLenght(input))  checkHashExist(input)
-
+    function handleClick() {
+        if (isEmpty(input) && goodLenght(input)) checkHashExist(input);
     }
 
-    function checkHashExist(value){
+    async function checkHashExist(value) {
         const requestOptions = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ userHash: value })
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ userHash: value }),
         };
-        fetch('http://localhost:3000/checkHash', requestOptions)
-        .then(response => response.json())
-        .then(data => {
-            setHash(data.userHash)
-        } );
-        console.log(hash)
-
+        await fetch("http://localhost:3000/checkHash", requestOptions)
+            .then((response) => response.json())
+            .then((data) => {
+                setHash(data.userHash);
+                setHashText(data.hashText);
+                setResponseCode(data.responseCode);
+                message();
+            });
+        console.log(hash);
     }
-    
+
+    function message() {
+        let parent = document.getElementById("sprawdzMessage");
+        let child = parent.lastChild;
+        if (child) {
+            parent.removeChild(child);
+            parent.className = "";
+        }
+        else {
+            if (responseCode === 5 || responseCode === 3) {
+                let mess = document.createElement("span");
+                console.log(hashText)
+                mess.innerHTML = hashText;
+                parent.className = "ok"
+                parent.appendChild(mess);
+            }
+            else {
+                let mess = document.createElement("span");
+                mess.innerHTML = "Nie znaleziono";
+                parent.className = "error"
+                parent.appendChild(mess);
+            }
+        }
+    }
+
     return (
-        // <article className="article">
+        <article className="article">
             <div className="sprawdz-div">
                 <input
                     type="text"
@@ -44,7 +71,9 @@ const Sprawdz = () => {
                     onKeyDown={handleClick}
                 />
             </div>
-        // </article>
+
+            <div id="sprawdzMessage"></div>
+        </article>
     );
 };
 

@@ -32,7 +32,7 @@ class ZakodujPage extends React.Component {
         return (
             <main className="main">
                 <Layout>
-                    <article className="article">{this.state.view}</article>
+              {this.state.view}
                 </Layout>
             </main>
         );
