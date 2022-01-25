@@ -17,7 +17,7 @@ app.use(
 app.use(cors());
 
 app.get('/', (req, res) => {
-    res.json({'message': process.env.PORT});
+    res.json({'message': process.env.PORT, 'app': "server"});
   })
   
 app.post('/checkDb',async (req,res)=>{
