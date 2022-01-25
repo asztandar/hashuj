@@ -9,7 +9,7 @@ async function fetchDB(hash) {
         }),
     };
 
-    const ret = await fetch("http://hashuj-labproj24.apps.ocp.lab.cloudpak.site:3004/checkDb", requestOptions)
+    const ret = await fetch("http://server-labproj24.apps.ocp.lab.cloudpak.site:3004/checkDb", requestOptions)
         .then((response) => response.json())
         .then((data) => {
             console.log("/checkdb odp: ", data);

@@ -10,7 +10,7 @@ async function sendServer(userText,md5){
         }),
     };
 
-    const odp = await fetch("http://hashuj-labproj24.apps.ocp.lab.cloudpak.site:3004/addDB", requestOptions)
+    const odp = await fetch("http://server-labproj24.apps.ocp.lab.cloudpak.site:3004/addDB", requestOptions)
             .then((response) => response.json())
             .then((data) => {
                console.log("/addDB odp: ",data)
