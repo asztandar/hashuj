@@ -19,7 +19,7 @@ const Sprawdz = () => {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ userHash: value }),
         };
-        await fetch("http://localhost:3000/checkHash", requestOptions)
+        await fetch("http://hashuj-labproj24.apps.ocp.lab.cloudpak.site:3000/checkHash", requestOptions)
             .then((response) => response.json())
             .then((data) => {
                 setHash(data.userHash);

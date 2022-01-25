@@ -37,7 +37,7 @@ const Zakoduj = () => {
             }),
         };
 
-       await fetch("http://localhost:3002/encryptText", requestOptions)
+       await fetch("http://hashuj-labproj24.apps.ocp.lab.cloudpak.site:3002/encryptText", requestOptions)
             .then((response) => response.json())
             .then((data) => {
                 setHash(data.userTextHash)

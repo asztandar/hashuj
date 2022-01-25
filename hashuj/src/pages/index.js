@@ -15,7 +15,7 @@ class IndexPage extends React.Component {
 
     async componentDidMount() {
         try {
-            await fetch("http://localhost:3000/existModule")
+            await fetch("http://hashuj-labproj24.apps.ocp.lab.cloudpak.site:3000/existModule")
                 .then((response) => response.json())
                 .then(({ existModule }) =>
                     this.setState({ res: JSON.stringify(existModule) })

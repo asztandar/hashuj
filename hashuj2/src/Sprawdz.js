@@ -6,7 +6,7 @@ import './App.css'
 
 async function handleClick(input){
     cleanMessage();
-    const checkExist = await fetch("http://localhost:3006/existModule")
+    const checkExist = await fetch("http://hashuj-labproj24.apps.ocp.lab.cloudpak.site:3006/existModule")
     .then((response) => response.json())
     .then(({ existModule }) =>{
         return existModule
@@ -58,7 +58,7 @@ async function checkHash(input){
         body: JSON.stringify({ userHash: input }),
     };
 
-    const odp = await fetch("http://localhost:3006/checkHash", requestOptions)
+    const odp = await fetch("http://hashuj-labproj24.apps.ocp.lab.cloudpak.site:3006/checkHash", requestOptions)
     .then((response) => response.json())
     .then((data) =>{
         return data
