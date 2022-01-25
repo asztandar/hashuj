@@ -1,0 +1,151 @@
+.App{
+  width: 100%;
+  color: #fff;
+  background-color: #534ec6;
+  width: 100vw;
+  height: 100vh;
+}
+
+a{
+  color: #fff;
+  text-decoration: none;
+}
+
+header{
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  min-height: 50px !important;
+}
+
+
+.logo{ 
+  position: relative; 
+  height: 40px; 
+  width: 40px; 
+  padding-left: 6px;
+  padding-bottom: 1px;
+  padding-top: 1px;
+  text-align: center;
+  text-decoration-color: transparent;
+  font-size: 40px;
+  font-weight: bold;
+  margin-left: 5%;
+  margin-top: auto;
+  margin-bottom: auto;
+
+}
+
+.menu{
+  margin-right: 4% !important;
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 20px !important;
+  font-size: 30px;
+}
+
+.Sprawdz{
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  justify-content: center;  
+  align-items: center;
+}
+
+.sprawdz-div{
+  width: 70%;
+  height: 25%;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 40px;
+  background-color: #918edb;
+}
+
+.sprawdz-div > img {
+  margin-left: 5px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.sprawdz-div > input {
+  width: 90%;
+  height: 90%;
+  font-size: 40px;
+  font-family: "Sitka Display";
+  text-align: center;
+  background-color: #918edb;
+  color: #ffffff !important;
+  border: none;
+}
+
+.sprawdz-div > .noModule{
+  padding: 30px 50px;
+  background-color: darkorange;
+}
+
+.ok{
+  margin-top: 120px;
+  padding: 30px 50px;
+  background-color: rgb(52, 189, 40);
+}
+
+.warning{
+  margin-top: 120px;
+  padding: 30px 50px;
+  background-color: rgb(189, 147, 40);
+}
+
+.error{
+  margin-top: 120px;
+  padding: 30px 50px;
+  background-color: rgb(138, 23, 38);
+}
+
+#message{
+  text-align: center;
+}
+
+:root {
+  --placeholder-color: #fff;
+  --main-color: #534ec6;
+}
+
+::placeholder {
+  color: var(--placeholder-color);
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: var(--placeholder-color);
+}
+
+::-ms-input-placeholder {
+  color: var(--placeholder-color);
+}
+
+*:focus {
+  outline: none;
+}
+
+.checkbox{
+  width: 70%;
+  font-size: 20px;
+}
+input[type=checkbox] {
+  transform: scale(1.5);
+}
+
+.active{
+  color: #DBCD12;
+}
+
+footer{
+  text-align: center;
+  font-size: 30px;
+}

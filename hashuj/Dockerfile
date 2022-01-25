@@ -1,5 +1,4 @@
-FROM node:alpine
-RUN npm install --global gatsby-cli
+FROM gatsbyjs/gatsby-dev-builds
 WORKDIR /app
 COPY package.json ./
 COPY ./ ./
