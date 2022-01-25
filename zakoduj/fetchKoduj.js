@@ -14,7 +14,7 @@ async function fetchKoduj(body){
         }),
     };
 
-   await fetch("http://kodowanie-labproj24.apps.ocp.lab.cloudpak.site:3003/encrypt", requestOptions)
+   await fetch("http://kodowanie-labproj24.apps.ocp.lab.cloudpak.site/encrypt", requestOptions)
             .then((response) => response.json())
             .then((data) => {
                 console.log("data: ", data)
