@@ -2,7 +2,7 @@ import klucz from "./key.png";
 import React, { useState } from "react";
 
 async function handleClick(input, checkbox) {
-    const checkExist = await fetch("http://zakoduj-labproj24.apps.ocp.lab.cloudpak.site:3002/existModule")
+    const checkExist = await fetch("http://zakoduj-labproj24.apps.ocp.lab.cloudpak.site/existModule")
         .then((response) => response.json())
         .then(({ existModule }) => {
             return existModule;
@@ -31,7 +31,7 @@ async function encrypt(input,checkbox) {
         body: JSON.stringify({ userText: input, checkboxChoose: checkbox }),
     };
 
-    const odp = await fetch("http://zakoduj-labproj24.apps.ocp.lab.cloudpak.site:3002/encryptText", requestOptions)
+    const odp = await fetch("http://zakoduj-labproj24.apps.ocp.lab.cloudpak.site/encryptText", requestOptions)
         .then((response) => response.json())
         .then((data) => {
             return data;
