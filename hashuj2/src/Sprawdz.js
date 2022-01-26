@@ -20,7 +20,6 @@ async function handleClick(input){
         }
         else{
             const message = "Wprowadź poprawny skrót md5";
-            alert("elo")
             setMEssage(message, "warning");
         }
     }

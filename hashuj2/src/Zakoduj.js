@@ -16,7 +16,6 @@ async function handleClick(input, checkbox) {
             encrypt(input, checkbox);
         } else {
             const message = "Wprowadź poprawny skrót md5";
-            alert("elo");
             setMEssage(message, "warning");
         }
     } else {
@@ -50,11 +49,9 @@ async function encrypt(input,checkbox) {
 
 function notEmpty(text) {
     if (text.length !==0) {
-      alert("notEmpty true")
       return true;
     }
     else {
-      alert("notEmpty false")
       return false;
     }
 }
