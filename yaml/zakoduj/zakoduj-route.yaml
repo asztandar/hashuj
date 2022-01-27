@@ -1,0 +1,31 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  creationTimestamp: "2022-01-26T00:01:36Z"
+  labels:
+    app: hashuj-zakoduj-deploy
+  name: zakoduj
+  namespace: labproj24
+  resourceVersion: "80046305"
+  uid: 13eedc4c-d721-4a12-9c0d-0d69b348d751
+spec:
+  host: zakoduj-labproj24.apps.ocp.lab.cloudpak.site
+  port:
+    targetPort: 3002
+  to:
+    kind: Service
+    name: hashuj-zakoduj-svc
+    weight: 100
+  wildcardPolicy: None
+status:
+  ingress:
+  - conditions:
+    - lastTransitionTime: "2022-01-26T00:01:36Z"
+      status: "True"
+      type: Admitted
+    host: zakoduj-labproj24.apps.ocp.lab.cloudpak.site
+    routerCanonicalHostname: router-default.apps.ocp.lab.cloudpak.site
+    routerName: default
+    wildcardPolicy: None

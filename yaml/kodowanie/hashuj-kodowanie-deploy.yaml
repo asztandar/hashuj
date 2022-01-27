@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: hashuj-kodowanie-deploy
+  name: hashuj-kodowanie-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hashuj-kodowanie-deploy
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: hashuj-kodowanie-deploy
+    spec:
+      containers:
+      - image: image-registry.openshift-image-registry.svc:5000/labproj24/kodowanie:26.0
+        name: kodowanie
+        ports:
+        - containerPort: 3003
+        resources: {}
+status: {}

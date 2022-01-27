@@ -1,0 +1,31 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  creationTimestamp: "2022-01-25T23:51:23Z"
+  labels:
+    app: hashuj-hashuj2-deploy
+  name: hashuj
+  namespace: labproj24
+  resourceVersion: "80039947"
+  uid: 6885aeaf-f511-4596-b2d0-b4564625788a
+spec:
+  host: hashuj-labproj24.apps.ocp.lab.cloudpak.site
+  port:
+    targetPort: 80
+  to:
+    kind: Service
+    name: hashuj-hashuj2-svc
+    weight: 100
+  wildcardPolicy: None
+status:
+  ingress:
+  - conditions:
+    - lastTransitionTime: "2022-01-25T23:51:23Z"
+      status: "True"
+      type: Admitted
+    host: hashuj-labproj24.apps.ocp.lab.cloudpak.site
+    routerCanonicalHostname: router-default.apps.ocp.lab.cloudpak.site
+    routerName: default
+    wildcardPolicy: None

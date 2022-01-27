@@ -1,0 +1,31 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  creationTimestamp: "2022-01-26T00:07:17Z"
+  labels:
+    app: hashuj-kodowanie-deploy
+  name: kodowanie
+  namespace: labproj24
+  resourceVersion: "80049927"
+  uid: 4bc493ce-bee5-4dd6-9a66-0c5ce3df2ce2
+spec:
+  host: kodowanie-labproj24.apps.ocp.lab.cloudpak.site
+  port:
+    targetPort: 3003
+  to:
+    kind: Service
+    name: hashuj-kodowanie-svc
+    weight: 100
+  wildcardPolicy: None
+status:
+  ingress:
+  - conditions:
+    - lastTransitionTime: "2022-01-26T00:07:17Z"
+      status: "True"
+      type: Admitted
+    host: kodowanie-labproj24.apps.ocp.lab.cloudpak.site
+    routerCanonicalHostname: router-default.apps.ocp.lab.cloudpak.site
+    routerName: default
+    wildcardPolicy: None

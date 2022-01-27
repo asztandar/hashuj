@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: hashuj-hashuj2-deploy
+  name: hashuj-hashuj2-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hashuj-hashuj2-deploy
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: hashuj-hashuj2-deploy
+    spec:
+      containers:
+      - image: image-registry.openshift-image-registry.svc:5000/labproj24/hashuj2:26.2
+        name: hashuj2
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}

@@ -1,0 +1,31 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  creationTimestamp: "2022-01-25T23:57:20Z"
+  labels:
+    app: hashuj-sprawdz-deploy
+  name: sprawdz
+  namespace: labproj24
+  resourceVersion: "80043563"
+  uid: 6122b084-ec82-42db-81e9-2b6bd38bb72c
+spec:
+  host: sprawdz-labproj24.apps.ocp.lab.cloudpak.site
+  port:
+    targetPort: 3006
+  to:
+    kind: Service
+    name: hashuj-sprawdz-svc
+    weight: 100
+  wildcardPolicy: None
+status:
+  ingress:
+  - conditions:
+    - lastTransitionTime: "2022-01-25T23:57:20Z"
+      status: "True"
+      type: Admitted
+    host: sprawdz-labproj24.apps.ocp.lab.cloudpak.site
+    routerCanonicalHostname: router-default.apps.ocp.lab.cloudpak.site
+    routerName: default
+    wildcardPolicy: None

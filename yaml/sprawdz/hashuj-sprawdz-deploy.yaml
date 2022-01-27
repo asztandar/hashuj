@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: hashuj-sprawdz-deploy
+  name: hashuj-sprawdz-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hashuj-sprawdz-deploy
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: hashuj-sprawdz-deploy
+    spec:
+      containers:
+      - image: image-registry.openshift-image-registry.svc:5000/labproj24/sprawdz:26.0
+        name: sprawdz
+        ports:
+        - containerPort: 3006
+        resources: {}
+status: {}

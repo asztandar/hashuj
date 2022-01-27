@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: hashuj-zakoduj-deploy
+  name: hashuj-zakoduj-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hashuj-zakoduj-deploy
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: hashuj-zakoduj-deploy
+    spec:
+      containers:
+      - image: image-registry.openshift-image-registry.svc:5000/labproj24/zakoduj:26.0
+        name: zakoduj
+        ports:
+        - containerPort: 3002
+        resources: {}
+status: {}

@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2022-01-25T23:55:54Z"
+  labels:
+    app: hashuj-sprawdz-deploy
+  name: hashuj-sprawdz-svc
+  namespace: labproj24
+  resourceVersion: "80042712"
+  uid: e93f7883-e533-4134-95eb-468b491a4738
+spec:
+  clusterIP: 172.30.109.120
+  clusterIPs:
+  - 172.30.109.120
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - port: 3006
+    protocol: TCP
+    targetPort: 3006
+  selector:
+    app: hashuj-sprawdz-deploy
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
